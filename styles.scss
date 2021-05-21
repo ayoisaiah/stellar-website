@@ -1,5 +1,8 @@
-$body-bg-color: #ffffff;
-$border-radius: 5px;
+:root {
+	--body-bg-color: #ffffff;
+	--border-radius: 5px;
+	--border: 1px solid #d3d3d3;
+}
 
 @mixin flex-container() {
 	display: flex;
@@ -20,7 +23,7 @@ html {
 
 body {
 	font-family: "Raleway", sans-serif;
-	background: $body-bg-color;
+	background: var(--body-bg-color);
 	transition: all 0.5s ease-in-out;
 }
 
@@ -40,97 +43,96 @@ body {
 	}
 
 	.hero-gif {
-		border-radius: $border-radius;
+		border-radius: var(--border-radius);
 	}
 
 	#logo {
 		height: 300px;
-		border-radius: $border-radius;
+		border-radius: var(--border-radius);
 	}
 }
 
 #feature-list {
-	$feature-border: 1px solid #d3d3d3;
 	background: #fff;
-	border-top: $feature-border;
-	border-bottom: $feature-border;
+	border-top: var(--border);
+	border-bottom: var(--border);
 	padding: 6rem 1.5rem;
+}
 
-	.feature {
-		@include flex-container();
-		align-items: center;
-		margin: 0 auto;
-	}
+.feature {
+	@include flex-container();
+	align-items: center;
+	margin: 0 auto;
+}
 
-	.feature-image {
-		width: 50%;
-		border-radius: $border-radius;
-		box-shadow: 1px 1px 5px;
-	}
+.feature-image {
+	width: 50%;
+	border-radius: var(--border-radius);
+	box-shadow: 1px 1px 5px;
+}
 
-	.feature-description {
-		width: 40%;
-	}
+.feature-description {
+	width: 40%;
+}
 
-	.feature-description .subtitle {
-		text-decoration: underline;
-		text-decoration-color: #d6f49d;
-	}
-	.desc {
-		font-size: 1.1em;
-	}
+.feature-description .subtitle {
+	text-decoration: underline;
+	text-decoration-color: #d6f49d;
+}
+.desc {
+	font-size: 1.1em;
+}
 
-	.reverse {
-		flex-direction: row-reverse;
-	}
+.reverse {
+	flex-direction: row-reverse;
 }
 
 .install-options {
 	text-align: center;
+}
 
-	.sub-text {
-		max-width: 640px;
-		margin: 0 auto;
-	}
+.sub-text {
+	max-width: 640px;
+	margin: 0 auto;
+}
 
-	#dl-options {
-		@include flex-container();
-		margin: 40px 0;
-		transition: all 0.5s;
-	}
+#dl-options {
+	@include flex-container();
+	margin: 40px 0;
+	transition: all 0.5s;
+}
 
-	#dl-options > div:nth-child(2) {
-		border-left: 1px solid #b4b4b4;
-		border-right: 1px solid #b4b4b4;
-	}
+#dl-options > div:nth-child(2) {
+	border-left: var(--border);
+	border-right: var(--border);
+}
 
-	.chrome-btn {
-		border: none;
-		background: linear-gradient(to right, #dd4d40 30%, #ffce44 150%);
-	}
+.chrome-btn {
+	border: none;
+	background: linear-gradient(to right, #dd4d40 30%, #ffce44 150%);
+}
 
-	.edge-btn {
-		border: none;
-		background: linear-gradient(to right, #4ad787 30%, #0d549c 150%);
-	}
+.edge-btn {
+	border: none;
+	background: linear-gradient(to right, #4ad787 30%, #0d549c 150%);
+}
 
-	.firefox-btn {
-		border: none;
-		background: linear-gradient(to right, #ffc12b 30%, #b83ce9 150%);
-	}
+.firefox-btn {
+	border: none;
+	background: linear-gradient(to right, #ffc12b 30%, #b83ce9 150%);
+}
 
-	.small-icon {
-		width: 20px !important;
-		margin-right: 0.8em !important;
-	}
+.small-icon {
+	width: 20px !important;
+	margin-right: 0.8em !important;
+}
 
-	.dl-btn:hover {
-		opacity: 0.9;
-	}
+.dl-btn:hover {
+	opacity: 0.9;
+}
 
-	.browser-logo {
-		width: 100px;
-	}
+.browser-logo {
+	width: 100px;
 }
 
 .svg {

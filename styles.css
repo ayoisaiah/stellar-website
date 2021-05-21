@@ -1,3 +1,9 @@
+:root {
+  --body-bg-color: #ffffff;
+  --border-radius: 5px;
+  --border: 1px solid #d3d3d3;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -12,7 +18,7 @@ html {
 
 body {
   font-family: "Raleway", sans-serif;
-  background: #ffffff;
+  background: var(--body-bg-color);
   transition: all 0.5s ease-in-out;
 }
 
@@ -31,81 +37,96 @@ body {
   max-width: 650px !important;
 }
 #hero .hero-gif {
-  border-radius: 5px;
+  border-radius: var(--border-radius);
 }
 #hero #logo {
   height: 300px;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
 }
 
 #feature-list {
   background: #fff;
-  border-top: 1px solid #d3d3d3;
-  border-bottom: 1px solid #d3d3d3;
+  border-top: var(--border);
+  border-bottom: var(--border);
   padding: 6rem 1.5rem;
 }
-#feature-list .feature {
+
+.feature {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
-#feature-list .feature-image {
+
+.feature-image {
   width: 50%;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   box-shadow: 1px 1px 5px;
 }
-#feature-list .feature-description {
+
+.feature-description {
   width: 40%;
 }
-#feature-list .feature-description .subtitle {
+
+.feature-description .subtitle {
   text-decoration: underline;
   text-decoration-color: #d6f49d;
 }
-#feature-list .desc {
+
+.desc {
   font-size: 1.1em;
 }
-#feature-list .reverse {
+
+.reverse {
   flex-direction: row-reverse;
 }
 
 .install-options {
   text-align: center;
 }
-.install-options .sub-text {
+
+.sub-text {
   max-width: 640px;
   margin: 0 auto;
 }
-.install-options #dl-options {
+
+#dl-options {
   display: flex;
   justify-content: space-between;
   margin: 40px 0;
   transition: all 0.5s;
 }
-.install-options #dl-options > div:nth-child(2) {
-  border-left: 1px solid #b4b4b4;
-  border-right: 1px solid #b4b4b4;
+
+#dl-options > div:nth-child(2) {
+  border-left: var(--border);
+  border-right: var(--border);
 }
-.install-options .chrome-btn {
+
+.chrome-btn {
   border: none;
   background: linear-gradient(to right, #dd4d40 30%, #ffce44 150%);
 }
-.install-options .edge-btn {
+
+.edge-btn {
   border: none;
   background: linear-gradient(to right, #4ad787 30%, #0d549c 150%);
 }
-.install-options .firefox-btn {
+
+.firefox-btn {
   border: none;
   background: linear-gradient(to right, #ffc12b 30%, #b83ce9 150%);
 }
-.install-options .small-icon {
+
+.small-icon {
   width: 20px !important;
   margin-right: 0.8em !important;
 }
-.install-options .dl-btn:hover {
+
+.dl-btn:hover {
   opacity: 0.9;
 }
-.install-options .browser-logo {
+
+.browser-logo {
   width: 100px;
 }
 
