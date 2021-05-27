@@ -1,3 +1,6 @@
+@charset "utf-8";
+@import "./bulma/bulma.sass";
+
 :root {
 	--body-bg-color: #ffffff;
 	--border-radius: 5px;
@@ -11,7 +14,7 @@
 
 html {
 	box-sizing: border-box;
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 *,
@@ -36,7 +39,7 @@ body {
 }
 
 .logo-image {
-  width: 150px;
+	width: 150px;
 }
 
 #hero {
@@ -56,9 +59,9 @@ body {
 		border-radius: var(--border-radius);
 	}
 
-  .hero-image {
-    padding: 3rem;
-  }
+	.hero-image {
+		padding: 3rem;
+	}
 }
 
 .section {
@@ -75,7 +78,7 @@ body {
 	@include flex-container();
 	align-items: center;
 	margin: 0 auto;
-  padding: 3rem;
+	padding: 3rem;
 }
 
 .feature-image {
@@ -116,14 +119,14 @@ body {
 }
 
 .dl-options .column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .dl-options .button {
-  margin-top: auto;
+	margin-top: auto;
 }
 
 .dl-options > div:nth-child(2) {
@@ -199,30 +202,29 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-  #hero {
-    padding: 3rem 1.5rem;
+	#hero {
+		padding: 3rem 1.5rem;
 
-    .hero-content {
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-    }
+		.hero-content {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+		}
 
+		.hero-image {
+			padding: 0;
+		}
 
-    .hero-image {
-      padding: 0;
-    }
+		.button.is-large {
+			font-size: inherit;
+		}
+	}
 
-    .button.is-large {
-      font-size: inherit;
-    }
-  }
-
-  .nav-logo {
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
-  }
+	.nav-logo {
+		display: inline-flex;
+		width: 100%;
+		justify-content: center;
+	}
 
 	.logo-image {
 		width: 200px;
@@ -238,12 +240,12 @@ body {
 		text-align: center;
 	}
 
-  .section {
-    padding: 3rem 1.5rem;
-  }
+	.section {
+		padding: 3rem 1.5rem;
+	}
 
 	.feature {
-    padding: 20px 0;
+		padding: 20px 0;
 		flex-direction: column-reverse;
 	}
 
@@ -264,9 +266,9 @@ body {
 	.feature-description {
 		width: 100%;
 
-    .subtitle {
-      text-align: center;
-    }
+		.subtitle {
+			text-align: center;
+		}
 	}
 
 	.desc {
@@ -289,13 +291,14 @@ body {
 		border-right: none;
 	}
 
-  .title.mb-6, .subtitle.mb-6 {
-    margin-bottom: 1.5rem !important;
-  }
+	.title.mb-6,
+	.subtitle.mb-6 {
+		margin-bottom: 1.5rem !important;
+	}
 
-  .install-options > .title {
-    line-height: 1.4;
-  }
+	.install-options > .title {
+		line-height: 1.4;
+	}
 
 	.browser-logo {
 		width: 80px;
