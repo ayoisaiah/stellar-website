@@ -68,7 +68,7 @@ body {
 	padding: 6rem 1.5rem;
 }
 
-#feature-list {
+.feature-list {
 	background: #fff;
 	border-top: var(--border);
 	border-bottom: var(--border);
@@ -183,7 +183,12 @@ body {
 	align-items: center;
 }
 
+.credits h3:first-of-type {
+	border-right: 1px solid #fff;
+}
+
 .credits a:hover {
+	color: #fff;
 	text-decoration: underline;
 }
 
@@ -333,8 +338,22 @@ body {
 		margin: 10px 0;
 	}
 
+	.links {
+		margin-bottom: 1em;
+	}
+
 	.credits {
 		font-size: 0.8em;
 		text-align: center;
+		flex-direction: column;
+	}
+
+	.credits h3:first-of-type {
+		border: none;
+		margin-bottom: 0.5em;
+	}
+
+	.credits h3 {
+		padding: 0 !important;
 	}
 }
