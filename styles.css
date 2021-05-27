@@ -6,6 +6,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -17,7 +18,7 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--body-bg-color);
   transition: all 0.5s ease-in-out;
 }
@@ -27,6 +28,10 @@ body {
 }
 .navbar .navbar-item a:hover {
   background-color: transparent;
+}
+
+.logo-image {
+  width: 150px;
 }
 
 #hero {
@@ -43,12 +48,18 @@ body {
   height: 300px;
   border-radius: var(--border-radius);
 }
+#hero .hero-image {
+  padding: 3rem;
+}
+
+.section {
+  padding: 6rem 1.5rem;
+}
 
 #feature-list {
   background: #fff;
   border-top: var(--border);
   border-bottom: var(--border);
-  padding: 6rem 1.5rem;
 }
 
 .feature {
@@ -56,6 +67,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 3rem;
 }
 
 .feature-image {
@@ -90,14 +102,25 @@ body {
   margin: 0 auto;
 }
 
-#dl-options {
+.dl-options {
   display: flex;
   justify-content: space-between;
   margin: 40px 0;
   transition: all 0.5s;
 }
 
-#dl-options > div:nth-child(2) {
+.dl-options .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dl-options .button {
+  margin-top: auto;
+}
+
+.dl-options > div:nth-child(2) {
   border-left: var(--border);
   border-right: var(--border);
 }
@@ -139,7 +162,7 @@ body {
   color: #fff;
 }
 
-#footer-content {
+.footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -171,17 +194,29 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-  .hero-content {
+  #hero {
+    padding: 3rem 1.5rem;
+  }
+  #hero .hero-content {
     display: block;
     margin: 0 auto;
     text-align: center;
   }
+  #hero .hero-image {
+    padding: 0;
+  }
+  #hero .button.is-large {
+    font-size: inherit;
+  }
 
-  #logo {
-    width: 180px;
-    height: 180px;
-    margin-left: auto;
-    margin-right: auto;
+  .nav-logo {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo-image {
+    width: 200px;
   }
 
   .intro {
@@ -194,10 +229,12 @@ body {
     text-align: center;
   }
 
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
   .feature {
-    padding: 10px;
-    padding-bottom: 20px;
-    text-align: center;
+    padding: 20px 0;
     flex-direction: column-reverse;
   }
 
@@ -217,6 +254,8 @@ body {
 
   .feature-description {
     width: 100%;
+  }
+  .feature-description .subtitle {
     text-align: center;
   }
 
@@ -224,20 +263,28 @@ body {
     font-size: 1em;
   }
 
-  #dl-options {
+  .dl-options {
     flex-direction: column;
     margin: 0;
   }
 
-  #dl-options .column {
+  .dl-options .column {
     width: 100%;
     padding: 40px 0 !important;
   }
 
-  #dl-options > .column:not(:last-of-type) {
+  .dl-options > .column:not(:last-of-type) {
     border-bottom: 1px solid #b4b4b4;
     border-left: none;
     border-right: none;
+  }
+
+  .title.mb-6, .subtitle.mb-6 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .install-options > .title {
+    line-height: 1.4;
   }
 
   .browser-logo {
@@ -255,19 +302,19 @@ body {
     margin-bottom: 20px;
   }
 
-  #footer-content {
+  .footer-content {
     flex-direction: column-reverse;
   }
 
-  #footer-content h3 {
+  .footer-content h3 {
     font-size: 1em;
   }
 
-  #footer-content p {
+  .footer-content p {
     font-size: 0.8em;
   }
 
-  #footer-content .columns {
+  .footer-content .columns {
     display: flex;
     flex-direction: row;
     margin: 10px 0;
