@@ -10251,6 +10251,10 @@ body {
 #hero .hero-image {
   padding: 3rem;
 }
+#hero .hero-img {
+  border-radius: var(--border-radius);
+  box-shadow: 1px 1px 5px;
+}
 
 .section {
   padding: 6rem 1.5rem;
