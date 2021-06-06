@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx browser-sync -sw",
     "sass": "npx sass --quiet-deps --watch styles.scss styles.css",
-    "build": "npx sass --style compressed styles.scss styles.css"
+    "build": "npx sass --style compressed styles.scss styles.css && node uncss.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "sass": "^1.34.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.14"
+    "browser-sync": "^2.26.14",
+    "uncss": "^0.17.3"
   }
 }
